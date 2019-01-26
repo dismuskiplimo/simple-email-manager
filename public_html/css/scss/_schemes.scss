@@ -1,0 +1,397 @@
+
+body {
+
+&.red-scheme {
+    color: $red-font;
+
+    .navbar,
+    .submenu,
+    .breadcrumbs {
+      a {
+        color: $red-font;
+
+        &:hover {
+          color: lighten($red-font, 10%);
+          text-decoration: none;
+        }
+      }
+    }
+
+    .divider {
+      background: none repeat scroll 0 0 rgba(255,255,255,.48);
+    }
+
+    /* navbar */
+    .navbar-default {
+      background-color: darken($redmid, 5%);
+
+      .navbar-header {
+        background-color: $redmid;
+      }
+
+      .navbar-brand {
+        color: transparentize($redmin, 0.1);
+        background: url(../images/minoral-logo-white.png) no-repeat 0 23px;
+
+        &:hover {
+          color: white;
+        }
+      }
+
+      .user-controls {
+        >ul>li>a {
+          color: transparentize($redmin, 0.1);
+
+          &:hover {
+            color: white;
+          }
+        }
+      }
+
+      .sidebar-collapse a {
+        i {
+          color: transparentize($redmin, 0.1);
+        }
+
+        &:hover {
+          i {
+            color: white;
+          }
+        }
+      }
+
+      .search>input {
+        background-color: transparentize($redmax, 0.5);
+        color: transparentize($redmin, 0.55);
+
+        &:focus {
+          background-color: transparentize($redmax, 0.1);
+        }
+      }
+
+      .navbar-nav>li.quick-action>a {
+        background-color: transparentize($redmax, 0.32);
+      }
+
+      .navbar-nav>li>a {
+        color: transparentize($redmin, 0.1);
+      }
+
+      .navbar-nav>li.divided>.divider {
+        background: none repeat scroll 0 0 rgba(255,255,255,.25);
+      }
+
+      .navbar-nav>li>a:hover {
+        color: white;
+        background-color: transparentize(white, .9);
+      }
+
+      .navbar-nav>.active>a,
+      .navbar-nav>.active>a:hover,
+      .navbar-nav>.active>a:focus {
+        color: white;
+        background-color: transparentize(white, .9);
+      }
+
+      .navbar-nav>.open>a,
+      .navbar-nav>.open>a:hover,
+      .navbar-nav>.open>a:focus {
+        color: transparentize($redmin, 0.1);
+        background-color: transparentize(white, .9);
+      }
+
+      .navbar-nav>.open>.dropdown-menu>.open>a,
+      .navbar-nav>.open>.dropdown-menu>.open>a:hover,
+      .navbar-nav>.open>.dropdown-menu>.open>a:focus {
+        color: transparentize($redmin, 0.1);
+        background-color: transparentize(white, .9);
+
+        i {
+          color: white;
+        }
+      }
+      .navbar-nav>.open>.dropdown-menu>.open>.dropdown-menu>.active>a,
+      .navbar-nav>.open>.dropdown-menu>.open>.dropdown-menu>.active>a:hover,
+      .navbar-nav>.open>.dropdown-menu>.open>.dropdown-menu>.active>a:focus {
+        i {
+          color: transparentize($redmin, 0.1);
+        }
+      }
+      /*sidebar*/
+      .side-nav {
+        background-color: lighten($redmid, 5%);
+
+        >li,
+        ul.dropdown-menu > li {
+          
+          >a {
+            color: transparentize($redmin, 0.1);
+            border-top: 1px solid transparentize($red-font, .94);
+
+            &:hover {
+              color: white;
+            }
+
+            >i {
+              border-right: 1px solid transparentize($red-font, .94);
+            }
+
+          }
+
+          &:first-child {
+            >a {
+              border-top: 0;
+            }
+          }
+
+          &:last-child {
+            >a {
+              border-bottom: 1px solid transparentize($red-font, .94);
+            }
+          }
+
+          &.active {
+            >a,
+            >a:hover,
+            >a:focus {
+              color: white;
+            }
+          }
+
+        }
+
+        li.collapsed-content {
+          ul.dropdown-menu {
+            > li:last-child {
+              > a:hover {
+                i {
+                  color: white;
+                } 
+              }
+            }
+          }
+          li.settings {
+            ul.dropdown-menu {
+              > li {
+                > a:hover {
+                  i {
+                    color: white;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        ul.dropdown-menu {
+          background-color: lighten($redmid, 10%);
+
+          > li {
+            > a {
+
+              &:hover {
+                background-color: transparentize(white, .9);
+
+                >i {
+                  color: white;
+                }
+
+              }
+            }
+          }
+        }
+
+        ul.dropdown-menu > li.dropdown-submenu > ul.dropdown-menu {
+          background-color: $redmid;
+
+          > li {
+
+            &:first-child {
+              border-top: 1px solid transparentize($red-font, .94);
+            }
+
+            > a {
+
+              &:hover {
+                background-color: transparentize(white, .9);
+
+                >i {
+                  color: white;
+                }
+
+              }
+            }
+          }
+        }
+
+        .user-status {
+          background-color: darken($redmid, 15%);
+
+          .user {
+            color: white;
+
+            .role {
+              color: transparentize($redmin, 0.1);
+            }
+          }
+        }
+
+      }
+    }
+
+    /* content */
+
+    #content {
+      background-color: transparentize($red-font, .96);
+    }
+
+    /* tiles */
+
+    .tile {
+
+      &.cornered {
+        &:before {
+        border-top-color: #f6f6f6;
+        border-right-color: #f6f6f6; 
+        }
+      }
+    }
+
+
+    /* breadcrumbs */
+
+    .breadcrumbs {
+      border-bottom: 1px solid transparentize($red-font, .9);
+
+      ol.breadcrumb {
+
+        >li {
+          a {
+            color: transparentize($red-font, .55);
+
+            &:hover {
+              color: transparentize($red-font, .3);
+            }
+          }
+
+          &:before {
+            color: transparentize($red-font, .55);
+          }
+        }
+        >.active {
+          color: transparentize($red-font, .3);
+        }
+      }
+    }
+
+    /* submenu */
+
+    .submenu {
+      h1 {
+        color: transparentize($red-font, .55);
+
+        &:after {
+          border-top-color: transparentize($red-font, .7);
+          border-right-color: transparentize($red-font, .7);
+        }
+      }
+
+      .nav {
+        &.nav-tabs {
+
+          >li {
+
+            &.active,
+            &.open {
+              >a {
+                color: $red-font;
+                background-color: transparentize($red-font, .96);
+
+                &:hover {
+                  color: $red-font;
+                  background-color: transparentize($red-font, .96);
+                }
+              }
+            }
+
+            >a {
+              color: transparentize($red-font, .5);
+
+              &:hover {
+                background-color: transparentize($red-font, .985);
+                color: transparentize($red-font, .2);
+              }
+            }
+
+            .dropdown-menu {
+              >li {
+                >a {
+                  &:hover {
+                    background-color: transparentize($red-font, .96);
+                  }
+                }
+                &.active {
+                  > a {
+                    background-color: transparentize($red-font, .96);
+                  }
+                }
+              }
+            }
+
+          }
+        }
+      }
+
+      .collapsed {
+        a {
+          &:hover {
+            h1 {
+              color: transparentize($red-font, .2);
+            }
+          }
+        }
+      }
+
+      &.open {
+        a { 
+          h1 {
+            color: transparentize($red-font, .2);
+          }
+        }
+        .nav {
+          &.nav-tabs {
+            >li {
+
+              &.dropdown {
+
+                &.open {
+                  .dropdown-menu {
+                    background-color: transparentize($red-font, .985);
+                  }
+                }
+              }
+            }
+
+          }
+        }
+      }
+
+    }
+
+    /* placeholders */
+    input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
+      color: transparentize($redmin, 0.55);
+    }
+    input:-moz-placeholder, textarea:-moz-placeholder { 
+      color: transparentize($redmin, 0.55);
+    }
+    input::-moz-placeholder, textarea::-moz-placeholder { 
+      color: transparentize($redmin, 0.55);
+    }
+    input:-ms-input-placeholder, textarea:-ms-input-placeholder { 
+      color: transparentize($redmin, 0.55);
+    }
+
+
+  }
+  }
